@@ -1,14 +1,17 @@
 <?php
 require 'connect.php';
-
-// $result1= mysqli_query($conn,$query1);
+// $id =$_GET["id"];
+// if (!isset($_GET['id']) or $_GET['id'] == ""){
+//     header("location:main.php");
+// }
 $id =$_GET['id'];
+echo "$id";
 
-if (isset($_GET['id']))
-{
-    $query = "SELECT * FROM jobsoffering WHERE id ='$id'";
+ $query = "SELECT * FROM jobsoffering WHERE id ='$id'";
     $result = mysqli_query($conn,$query);
-    $row = mysqli_fetch_assoc($result);
+// if (mysqli_num_rows($result)==0)
+// {
+//     header("location:main.php");
     // $row = mysqli_fetch_assoc($result);
 
 
@@ -18,7 +21,9 @@ if (isset($_GET['id']))
 // $original_price = $_POST['original_price'];
 // $discount_prince = $_POST['discount_prince'];
 
-}
+// }
+$row = mysqli_fetch_assoc($result);
+
 
 echo "</br>";
 echo "</br>";
@@ -26,9 +31,9 @@ echo "</br>";
 echo "id :" . " $row[id]";
 echo "</br>";
 
-echo "id stores:". "$row[jobname]";
+echo "job name:". "$row[jobname]";
 echo "</br>";
-echo  "name item :" ."$row[image]";
+echo  "image:" ."$row[image]";
 echo "</br>";
 
 

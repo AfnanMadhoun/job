@@ -44,7 +44,11 @@ echo "<tr><th>ID</th><th>job name</th><th>Details</th><th>job image</th></tr>";
                 echo "<td id='first'>" . $row['id'] . "</td>";
 
         echo "<td id='first'>" . $row['jobname'] . "</td>";
-        echo "<td id='first'><a href='detail.php?id=" . $row['details'] . "'>Details</a></td>";
+        $id = $row['id'];
+    // echo "<td><a href='details.php?id=$id'> delete </a></td>";
+    echo "<td id='first'><a  href='detail.php?id=" . $row['details'] . "'>Details</a></td>";
+
+        // echo "<td id='first'><a href='details.php?id=" . $row['details'] . "'>Details</a></td>";
         echo "<td id='first'>" . $row['image'] ."<img src='default.jpg' style : width=70px;heighet =80px>"."</td>"; 
         echo "</tr>";
               }
@@ -103,10 +107,15 @@ while($row1 = mysqli_fetch_assoc($result1))
         { 
 
           if ($row1['respons']==0) {
-      echo "<td id='first'>" . $row1['id'] . "</td>";
+
+            echo "<td id='first'>" . $row1['id'] . "</td>";
+
+            
    echo "<td id='second'>" . $row1['jobname'] . "</td>";
-    echo "<td id='second'><a href='detail.php?id=" . $row1['details'] . "'>Details</a></td>";
-    echo "<td id='second'>" . $row1['image'] ."<img src='default.jpg' style : width=70px;heighet =80px>"."</td>"; 
+   $id = $row['id'];
+
+   echo "<td ><a href='detail.php?id=" . $row['details'] . "'>Details</a></td>";
+   echo "<td id='second'>" . $row1['image'] ."<img src='default.jpg' style : width=70px;heighet =80px>"."</td>"; 
     echo "</tr>";
 
           }
