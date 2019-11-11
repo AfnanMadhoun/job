@@ -20,7 +20,9 @@ $result = mysqli_query($conn, $query);
 
 
 if ($result){
-	echo "user  sign up successfully";
+    echo "user  sign up successfully";
+    header("location:main.php");
+
 }
 else{
 	echo "Error " . mysqli_error($conn);
