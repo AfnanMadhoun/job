@@ -9,37 +9,39 @@
 </head>
 <body>
   
-    <form class="container">
+    <form class="container" action="signup.php" method="post">
     <div class="form-group">
     <label for="exampleInputEmail1">user name</label>
-    <input type="text" class="form-control"   placeholder="Enter user name">
+    <input type="text" class="form-control" name="name"  placeholder="Enter user name">
   </div>
   
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputPassword1">address</label>
+    <input type="text" name="address" class="form-control"  placeholder="enter your address">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Telephone number</label>
-    <input type="number" class="form-control"placeholder="TelNo">
+    <input type="number" name="telNo" class="form-control"placeholder="TelNo">
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">address</label>
-    <input type="text" class="form-control"  placeholder="enter your address">
-  </div>
+ 
   
 
   
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
+  
  
   <div class="form-group">
   <label >select your category</label>
 
-  <select class="form-control">
+  <select name="type" class="form-control">
   <option>busniss owner</option>
   <option> users  looking for jobs</option>
 
