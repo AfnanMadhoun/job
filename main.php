@@ -55,7 +55,7 @@ echo "<thead class='thead-light'><tr><th scope='col'>ID</th><th scope='col'>job 
   echo "</table>";
 }
 
-$query1 = "SELECT * FROM Jobsoffering   ";
+$query1 = "SELECT * FROM Jobsoffering  order by id desc ";
 
 
 
