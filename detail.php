@@ -1,14 +1,12 @@
 <?php
+$id =$_GET['id'];
 require 'connect.php';
 // $id =$_GET["id"];
 // if (!isset($_GET['id']) or $_GET['id'] == ""){
 //     header("location:main.php");
 // }
-$id =$_GET['id'];
-echo "$id";
-
- $query = "SELECT * FROM jobsoffering WHERE id ='$id'";
-    $result = mysqli_query($conn,$query);
+ $query = "SELECT * FROM jobsoffering WHERE id='$id'";
+ $result = mysqli_query($conn,$query);
 // if (mysqli_num_rows($result)==0)
 // {
 //     header("location:main.php");
@@ -24,19 +22,17 @@ echo "$id";
 // }
 $row = mysqli_fetch_assoc($result);
 
-
-echo "</br>";
-echo "</br>";
-
-echo "id :" . " $row[id]";
-echo "</br>";
-
-echo "job name:". "$row[jobname]";
-echo "</br>";
-echo  "image:" ."$row[image]";
-echo "</br>";
+echo "<table class='table container' id='first' border='2'>";
+echo "<thead class='thead-light'><tr><th scope='col'>ID</th><th scope='col'>job name</th><th scope='col'>job image</th></tr></thead>";
 
 
+echo"<td>" . " $row[id]" ."</td>";
+
+echo "<td>". "$row[jobname]"."</td>";
+
+echo  "<td>"."$row[image] "."<img src='default.jpg'>"."</td>";
+
+echo"</table>";
 
 
 
