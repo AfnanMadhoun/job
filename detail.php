@@ -1,100 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .container{
+
+        width:500px;
+    }
+    </style>
+</head>
+<body>
+
 <?php
+
 $id =$_GET['id'];
 require 'connect.php';
-// $id =$_GET["id"];
-// if (!isset($_GET['id']) or $_GET['id'] == ""){
-//     header("location:main.php");
-// }
+
  $query = "SELECT * FROM jobsoffering WHERE id='$id'";
  $result = mysqli_query($conn,$query);
-// if (mysqli_num_rows($result)==0)
-// {
-//     header("location:main.php");
-    // $row = mysqli_fetch_assoc($result);
 
-
-// $id = $_GET['id'];
-// $id_stores = $_POST['id_stores'];
-// $name = $_POST['name'];
-// $original_price = $_POST['original_price'];
-// $discount_prince = $_POST['discount_prince'];
-
-// }
 $row = mysqli_fetch_assoc($result);
 
-echo "<table class='table container' id='first' border='2'>";
-echo "<thead class='thead-light'><tr><th scope='col'>ID</th><th scope='col'>job name</th><th scope='col'>job image</th></tr></thead>";
+// echo "<table class='table container' id='first' border='2'>";
+// echo "<thead class='thead-light'><tr><th scope='col'>ID</th><th scope='col'>job name</th><th scope='col'>job image</th></tr></thead>";
 
 
-echo"<td>" . " $row[id]" ."</td>";
+echo"<ul class='list-group-item list-group-item-success container' >" ." ID:". " $row[id]" ."</ul>";
 
-echo "<td>". "$row[job_tittle]"."</td>";
-
-echo  "<td>"."$row[image] "."<img src='default.jpg'>"."</td>";
-
-echo"</table>";
-
-
-
-
-
-
-// if (!isset($_GET['id']) or $_GET['id'] == ""){
-//     header("location:main.php");
-// }
-// $id = $_GET['id'];
-
-
-// $query2 = "SELECT * FROM jobsoffering WHERE id='$id'";
-
-// $result2 = mysqli_query($conn, $query2);
-
-// // if (mysqli_num_rows($result1)==0){
-// //     header("location:main.php");
-// // }
-
-// $jobs = mysqli_fetch_assoc($result2);
-
-// echo "test";
-// echo "<ul>";
-// echo "<li>" . $jobs['jobname'] ."test". "</li>";
-// echo "<li>" . $jobs['respons'] . "</li>";
-// echo "<li>" . $jobs['image'] ."<img src= 'default.jpg'>". "</li>";
-
-// echo "</ul>";
+echo "<ul class='list-group-item list-group-item-success container'>"."COMPANY NAME:". "$row[company_name]"."</ul>";
+echo"<ul class='list-group-item list-group-item-success container'>" ."CATEGORY:". " $row[category]" ."</ul>";
+echo"<ul class='list-group-item list-group-item-success container'>" ."ADDRESS:". " $row[address]" ."</ul>";
+echo"<ul class='list-group-item list-group-item-success container'>"."STREET:"." $row[street]" ."</ul>";
+echo"<ul class='list-group-item list-group-item-success container'>"."CITY:" . " $row[city]" ."</ul>";
+echo"<ul class='list-group-item list-group-item-success container'>" ."JOB DESCRIPTION:". " $row[job_des]" ."</ul>";
+echo"<ul class='list-group-item list-group-item-success container'>"."JOB REQUIRMENT:" . " $row[job_req]" ."</ul>";
+echo"<ul class='list-group-item  list-group-item-success container'>" ."SALARY:". " $row[salary]" ."</ul>";
+echo"<ul class='list-group-item list-group-item-success  container'>" ."TELEPHONE NUMBER:". " $row[teleNo]" ."</ul>";
+echo"<ul class='list-group-item list-group-item-success container'>" ."EMAIL:". " $row[email]" ."</ul>";
 
 
 
-// // $result1= mysqli_query($conn,$query1);
-// $id =$_GET['id'];
-// if (isset($_GET['id']))
-// {
-//     $query = "SELECT * FROM stores WHERE id =$id";
-//     $result = mysqli_query($conn,$query);
-//    $row = mysqli_fetch_assoc($result);
 
-// // $id = $_GET['id'];
-// // $id_stores = $_POST['id_stores'];
-// // $name = $_POST['name'];
-// // $original_price = $_POST['original_price'];
-// // $discount_prince = $_POST['discount_prince'];
-// }
+// echo  "<td>"."$row[image] "."<img src='default.jpg'>"."</td>";
 
 
-// echo "</br>";
-// echo "</br>";
 
-// echo "id :" . " $row[id]";
-// echo "</br>";
 
-// echo "id stores:". "$row[id_stores]";
-// echo "</br>";
-// echo  "name item :" ."$row[name]";
-// echo "</br>";
-// echo  "originel price :"."$row[original_price]";
-// echo "</br>";
-// echo "discount_prince :" ."$row[discount_prince]";
-// echo "</br>";
+
 
 
 
@@ -104,3 +61,7 @@ echo"</table>";
 
 ?>
 
+
+    
+</body>
+</html>
