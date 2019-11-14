@@ -11,6 +11,10 @@
     .container{
 
         width:500px;
+      
+    }
+    .cs{
+margin-top:20px;
     }
     </style>
 </head>
@@ -30,7 +34,7 @@ $row = mysqli_fetch_assoc($result);
 // echo "<thead class='thead-light'><tr><th scope='col'>ID</th><th scope='col'>job name</th><th scope='col'>job image</th></tr></thead>";
 
 
-echo"<ul class='list-group-item list-group-item-success container' >" ." ID:". " $row[id]" ."</ul>";
+echo"<ul class='list-group-item list-group-item-success container cs' >" ." ID:". " $row[id]" ."</ul>";
 
 echo "<ul class='list-group-item list-group-item-success container'>"."COMPANY NAME:". "$row[company_name]"."</ul>";
 echo"<ul class='list-group-item list-group-item-success container'>" ."CATEGORY:". " $row[category]" ."</ul>";
