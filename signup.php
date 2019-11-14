@@ -13,7 +13,7 @@ $type=$_POST['type'];
 
 
 
-$query = "INSERT INTO user (name, password, email,address,telNo,type) values ('$name', '$password', '$email','$address','$telNo','$type')";
+$query = "INSERT INTO users (name, password, email,address,telNo,type) values ('$name', '$password', '$email','$address','$telNo','$type')";
 
 $result = mysqli_query($conn, $query);
 

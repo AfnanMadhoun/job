@@ -16,7 +16,7 @@
 
 require 'connect.php';
 
-$query = "SELECT * FROM Jobsoffering  LIMIT 8";
+$query = "SELECT * FROM Jobsoffering  LIMIT 12";
 
 
 $result = mysqli_query($conn, $query);
@@ -41,7 +41,7 @@ echo "<thead class='thead-light'><tr><th scope='col'>ID</th><th scope='col'>job 
                 echo "<tr  scope='row' id='first'>";
                 echo "<td id='first'>" . $row['id'] . "</td>";
 
-        echo "<td id='first'>" . $row['jobname'] . "</td>";
+        echo "<td id='first'>" . $row['job_tittle'] . "</td>";
         $id = $row['id'];
     echo "<td id='first'><a  href='detail.php?id=" . $row['id'] . "'>Details</a></td>";
 
@@ -74,7 +74,7 @@ while($row1 = mysqli_fetch_assoc($result1))
             echo "<td id='first'>" . $row1['id'] . "</td>";
 
             
-   echo "<td id='second'>" . $row1['jobname'] . "</td>";
+   echo "<td id='second'>" . $row1['job_tittle'] . "</td>";
    $id = $row['id'];
 
    echo "<td ><a href='detail.php?id=" . $row1['id'] . "'>Details</a></td>";

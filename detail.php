@@ -28,7 +28,7 @@ echo "<thead class='thead-light'><tr><th scope='col'>ID</th><th scope='col'>job 
 
 echo"<td>" . " $row[id]" ."</td>";
 
-echo "<td>". "$row[jobname]"."</td>";
+echo "<td>". "$row[job_tittle]"."</td>";
 
 echo  "<td>"."$row[image] "."<img src='default.jpg'>"."</td>";
 
